@@ -67,14 +67,14 @@ RPAREN=66
 LBRACKET=67
 RBRACKET=68
 DOT=69
-BITAND=70
+AMPERSAND=70
 NOT_OP=71
 BITNOT=72
-MINUS_OP=73
-PLUS_OP=74
-MUL_OP=75
-DIV_OP=76
-MOD_OP=77
+MINUS=73
+PLUS=74
+STAR=75
+DIV=76
+MOD=77
 LT_OP=78
 GT_OP=79
 XOR_OP=80
@@ -113,7 +113,6 @@ WS=83
 'void'=31
 'volatile'=32
 'while'=33
-'L?"(\\.|[^\\"])*"'=36
 '...'=37
 '>>='=38
 '<<='=39
@@ -140,7 +139,7 @@ WS=83
 '{'=60
 '}'=61
 ','=62
-':'=63
+' :'=63
 '='=64
 '('=65
 ')'=66
