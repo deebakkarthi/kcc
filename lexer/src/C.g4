@@ -78,6 +78,33 @@ HEX_ESCAPE_SEQUENCE
     : '\\x' HEX+
     ;
 
+fragment
+HEX_CONSTANT
+    :   '0'[xX](HEX)+(INTEGER_SUFFIX)?
+    ;
+
+fragment
+OCTAL_CONSTANT
+    :   '0'DIGIT+INTEGER_SUFFIX?
+    ;
+
+fragment
+INTEGER_CONSTANT
+    :   DIGIT+INTEGER_SUFFIX?
+    ;
+
+fragment
+CHAR_CONSTANT
+    :	'L'? '\'' CCHAR '\''
+    ;
+
+fragment
+FLOAT_CONSTANT
+    :	DIGIT+ EXP FLOATING_SUFFIX?
+    |   DIGIT* '.' DIGIT+ EXP? FLOATING_SUFFIX?
+    |   DIGIT+ '.' DIGIT* EXP? FLOATING_SUFFIX?
+    ;
+
 COMMENT
     :	  '/*' .*? '*/' -> channel(COMMENTS_CHAN)
     ;
@@ -214,34 +241,6 @@ IDENTIFIER
     :	  LETTER(LETTER|DIGIT)*
     ;
 
-fragment
-HEX_CONSTANT
-    :   '0'[xX](HEX)+(INTEGER_SUFFIX)?
-    ;
-
-fragment
-OCTAL_CONSTANT
-    :   '0'DIGIT+INTEGER_SUFFIX?
-    ;
-
-fragment
-INTEGER_CONSTANT
-    :   DIGIT+INTEGER_SUFFIX?
-    ;
-
-fragment
-CHAR_CONSTANT
-    :	'L'? '\'' CCHAR '\''
-    ;
-
-
-
-fragment
-FLOAT_CONSTANT
-    :	DIGIT+ EXP FLOATING_SUFFIX?
-    |   DIGIT* '.' DIGIT+ EXP? FLOATING_SUFFIX?
-    |   DIGIT+ '.' DIGIT* EXP? FLOATING_SUFFIX?
-    ;
 
 CONSTANT
     :	HEX_CONSTANT
@@ -394,5 +393,5 @@ QUESTION
 	:	'?'
 	;
 WS
-    :	  [ \r\n\t]+ -> skip
+    :	  [ \r\n\t]+
     ;
