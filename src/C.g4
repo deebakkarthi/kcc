@@ -403,16 +403,18 @@ primary_expression
 
 postfix_expression
     :   primary_expression
-    (   LBRACKET expression RBRACKET
-    |   LPAREN argument_expression_list? RPAREN
-    |   (DOT | PTR_OP)  IDENTIFIER
-    |   INC_OP
-    |   DEC_OP
-    )*
+    |   primary_expression LBRACKET expression RBRACKET
+    |   primary_expression LPAREN  RPAREN
+    |   primary_expression LPAREN argument_expression_list RPAREN
+    |   primary_expression DOT  IDENTIFIER
+    |   primary_expression PTR_OP  IDENTIFIER
+    |   primary_expression INC_OP
+    |   primary_expression DEC_OP
     ;
 
 argument_expression_list
-	: assignment_expression (COMMA assignment_expression)*
+	:   assignment_expression
+	|   assignment_expression COMMA assignment_expression
 	;
 
 unary_expression
@@ -437,48 +439,162 @@ cast_expression
     |   LPAREN type_name RPAREN cast_expression
     ;
 
-multiplicative_expression
-    :   cast_expression ((ASTERISK | DIV | MOD) cast_expression)*
+// multiplicative_expression
+//     :   cast_expression
+//     |   multiplicative_expression ASTERISK cast_expression
+//     |   multiplicative_expression DIV cast_expression
+//     |   multiplicative_expression MOD cast_expression
+//     ;
+
+multiplicative_expression     
+    :   cast_expression multiplicative_expression_prime
+    ;
+    
+multiplicative_expression_prime    
+    :   /* epsilon */
+    |   ASTERISK cast_expression multiplicative_expression_prime
+    |   DIV cast_expression multiplicative_expression_prime
+    |   MOD cast_expression multiplicative_expression_prime
+;
+
+
+// addictive_expression
+//     :   multiplicative_expression
+//     |   addictive_expression PLUS multiplicative_expression
+//     |   addictive_expression MINUS multiplicative_expression
+//     ;
+
+addictive_expression     
+    : multiplicative_expression addictive_expression_prime
     ;
 
-addictive_expression
-    :   multiplicative_expression ((PLUS | MINUS) multiplicative_expression)*
+addictive_expression_prime    
+    : /* epsilon */
+    | PLUS multiplicative_expression addictive_expression_prime
+    | MINUS multiplicative_expression addictive_expression_prime
     ;
 
 shift_expression
-    :   addictive_expression ((LEFT_OP | RIGHT_OP) addictive_expression)*
+    :   addictive_expression shift_expression_prime
     ;
 
-relational_expression
-    :   shift_expression ((LE_OP | GE_OP | LT_OP | GT_OP) shift_expression)*
+shift_expression_prime
+    :   /* epsilon */
+    |   LEFT_OP addictive_expression shift_expression_prime
+    |   RIGHT_OP addictive_expression shift_expression_prime
     ;
 
-equality_expression
-    :   relational_expression ((EQ_OP | NE_OP) relational_expression)*
+
+// relational_expression
+//     :   shift_expression
+//     |   relational_expression LT_OP shift_expression
+//     |   relational_expression GT_OP shift_expression
+//     |   relational_expression LE_OP shift_expression
+//     |   relational_expression GE_OP shift_expression
+//     ;
+
+relational_expression        
+    : shift_expression relational_expression_prime
     ;
 
-bit_and_expression
-    :   equality_expression (AMPERSAND equality_expression)*
+relational_expression_prime  
+    : /* epsilon */
+    | LT_OP shift_expression relational_expression_prime
+    | GT_OP shift_expression relational_expression_prime
+    | LE_OP shift_expression relational_expression_prime
+    | GE_OP shift_expression relational_expression_prime
     ;
 
-xor_expression
-    : bit_and_expression (XOR_OP bit_and_expression)*
+// equality_expression
+//     :   relational_expression
+//     |   equality_expression EQ_OP relational_expression
+//     |   equality_expression NE_OP relational_expression
+//     ;
+
+equality_expression         
+    : relational_expression equality_expression_prime
     ;
 
-bit_or_expression
-    :   xor_expression (OR_OP xor_expression)*
+equality_expression_prime   
+    : /* epsilon */
+    | EQ_OP relational_expression equality_expression_prime
+    | NE_OP relational_expression equality_expression_prime
     ;
 
-logical_and_expression
-    :   bit_or_expression (AND_OP bit_or_expression)*
+// bit_and_expression
+//     :   equality_expression
+//     |   bit_and_expression AMPERSAND equality_expression
+//     ;
+
+bit_and_expression            
+    :   equality_expression bit_and_expression_prime
     ;
 
-logical_or_expression
-    :   logical_and_expression (OR_OP logical_and_expression)*
+bit_and_expression_prime      
+    :   /* epsilon */
+    |   AMPERSAND equality_expression bit_and_expression_prime
+    ;
+
+// xor_expression
+//     :   bit_and_expression
+//     |   xor_expression XOR_OP bit_and_expression
+//     ;
+
+xor_expression                
+    :   bit_and_expression xor_expression_prime
+    ;
+
+xor_expression_prime          
+    :   /* epsilon */
+    |   XOR_OP bit_and_expression xor_expression_prime
+    ;
+
+// bit_or_expression
+//     :   xor_expression
+//     |   bit_or_expression OR_OP xor_expression
+//     ;
+
+bit_or_expression            
+    :   xor_expression bit_or_expression_prime
+    ;
+
+bit_or_expression_prime      
+    :   /* epsilon */
+    |   OR_OP xor_expression bit_or_expression_prime
+;
+
+// logical_and_expression
+//     :   bit_or_expression
+//     |   logical_and_expression AND_OP bit_or_expression
+//     ;
+
+logical_and_expression        
+    :   bit_or_expression logical_and_expression_prime
+    ;
+
+logical_and_expression_prime  
+    :   /* epsilon */
+    |   AND_OP bit_or_expression logical_and_expression_prime
+    ;
+
+
+// logical_or_expression
+//     :   logical_and_expression
+//     |   logical_or_expression OR_OP logical_and_expression
+//     ;
+
+logical_or_expression         
+    :   logical_and_expression logical_or_expression_prime
+    ;
+
+logical_or_expression_prime   
+    :   /* epsilon */
+    |   OR_OP logical_and_expression logical_or_expression_prime
     ;
 
 conditional_expression
-    :   logical_or_expression (QUESTION expression COLON conditional_expression)?
+    :   logical_or_expression
+    |   logical_or_expression QUESTION expression COLON conditional_expression
     ;
 
 assignment_expression
@@ -499,42 +615,54 @@ assignment_operator
     |	OR_ASSIGN
     ;
 
-expression
-    :   assignment_expression (COMMA assignment_expression)*
+// expression
+//     :   assignment_expression
+//     |   expression COMMA assignment_expression
+//     ;
+
+expression          
+    :   assignment_expression expression_prime
     ;
+
+expression_prime    
+    :   /* epsilon */
+    |   COMMA assignment_expression expression_prime
+;
 
 constant_expression
     :   conditional_expression
     ;
 
 declaration
-    :   declaration_specifiers init_declaration_list?
+    :   declaration_specifiers SCOLON
+    |   declaration_specifiers init_declaration_list SCOLON
     ;
 
 declaration_specifiers
-    :   declaration_specifier+
-    ;
-
-declaration_specifier
     :   storage_class_specifier
+    |   storage_class_specifier declaration_specifiers
     |   type_specifier
+    |   type_specifier declaration_specifiers
     |   type_qualifier
+    |   type_qualifier declaration_specifiers
     ;
 
 init_declaration_list
-    :   init_declarator (COMMA init_declarator)*
+    :   init_declarator
+    |   init_declarator COMMA init_declarator
     ;
 
 init_declarator
-    :   declarator (ASSIGN initializer)?
+    :   declarator
+    |   declarator ASSIGN initializer
     ;
 
 storage_class_specifier
-	: TYPEDEF
-	| EXTERN
-	| STATIC
-	| AUTO
-	| REGISTER
+	:   TYPEDEF
+	|   EXTERN
+	|   STATIC
+	|   AUTO
+	|   REGISTER
 	;
 
 type_specifier
@@ -549,22 +677,32 @@ type_specifier
 	| UNSIGNED
 	| struct_or_union_specifier
 	| enum_specifier
-	//| TYPE_NAME
 	;
 
 
 struct_or_union_specifier
-	: struct_or_union IDENTIFIER? '{' struct_declaration_list '}'
-	| struct_or_union IDENTIFIER
+	:   struct_or_union LBRACE struct_declaration_list  RBRACE
+	|   struct_or_union IDENTIFIER LBRACE struct_declaration_list  RBRACE
+	|   struct_or_union IDENTIFIER
 	;
 
 struct_or_union
-	: STRUCT
-	| UNION
+	:   STRUCT
+	|   UNION
 	;
 
-struct_declaration_list
-    : struct_declaration+
+// struct_declaration_list
+//     :   struct_declaration
+//     |   struct_declaration_list struct_declaration
+//     ;
+
+struct_declaration_list          
+    :   struct_declaration struct_declaration_list_prime
+    ;
+    
+struct_declaration_list_prime         
+    :   /* empty */
+    |   struct_declaration struct_declaration_list_prime
     ;
 
 struct_declaration
@@ -572,29 +710,56 @@ struct_declaration
     ;
 
 specifier_qualifier_list
-    :   (type_specifier | type_qualifier) specifier_qualifier_list?
+    :   type_specifier specifier_qualifier_list
+    |   type_specifier
+    |   type_qualifier specifier_qualifier_list
+    |   type_qualifier
     ;
 
-struct_declarator_list
-    :   struct_declarator (COMMA struct_declarator)*
+// struct_declarator_list
+//     :   struct_declarator
+//     |   struct_declaration_list COMMA struct_declarator
+//     ;
+
+struct_declarator_list       
+    :   struct_declarator struct_declarator_list_prime
+    ;
+
+struct_declarator_list_prime 
+    :   /* epsilon */
+    |   COMMA struct_declarator struct_declarator_list_prime
     ;
 
 struct_declarator
     :   declarator
-    |   declarator? COLON constant_expression
+    |   COLON constant_expression
+    |   declarator COLON constant_expression
     ;
 
 enum_specifier
-    :   ENUM IDENTIFIER? LBRACE enumerator_list RBRACE
+    :   ENUM  LBRACE enumerator_list RBRACE
+    |   ENUM IDENTIFIER LBRACE enumerator_list RBRACE
     |   ENUM IDENTIFIER
     ;
 
-enumerator_list
-    :   enumerator (COMMA enumerator)*
+// enumerator_list
+//     :   enumerator
+//     |   enumerator_list COMMA enumerator
+//     ;
+
+
+enumerator_list      
+    :   enumerator enumerator_list_prime
+    ;
+
+enumerator_list_prime
+    :   /* epsilon */
+    | COMMA enumerator enumerator_list_prime
     ;
 
 enumerator
-    :   IDENTIFIER  (ASSIGN constant_expression)?
+    :   IDENTIFIER
+    |   IDENTIFIER ASSIGN constant_expression
     ;
 
 type_qualifier
@@ -603,33 +768,70 @@ type_qualifier
     ;
 
 declarator
-    :   pointer? direct_declarator
+    :   pointer direct_declarator
+    |   direct_declarator
     ;
 
-direct_declarator
-    :   IDENTIFIER
-    |   LPAREN declarator RPAREN
-    |	direct_declarator LBRACKET constant_expression RBRACKET
-    |	direct_declarator LBRACKET RBRACKET
-    |	direct_declarator LPAREN parameter_type_list RPAREN
-    |	direct_declarator LPAREN identifier_list RPAREN
-    |	direct_declarator LPAREN RPAREN
+// direct_declarator
+//     :   IDENTIFIER
+//     |   LPAREN declarator RPAREN
+//     |	direct_declarator LBRACKET constant_expression RBRACKET
+//     |	direct_declarator LBRACKET RBRACKET
+//     |	direct_declarator LPAREN parameter_type_list RPAREN
+//     |	direct_declarator LPAREN identifier_list RPAREN
+//     |	direct_declarator LPAREN RPAREN
+//     ;
+
+direct_declarator          
+    :   IDENTIFIER direct_declarator_prime;
+
+direct_declarator_prime    
+    :   /* empty */
+    | LPAREN declarator RPAREN direct_declarator_prime
+    | LBRACKET constant_expression RBRACKET direct_declarator_prime
+    | LBRACKET RBRACKET direct_declarator_prime
+    | LPAREN parameter_type_list RPAREN direct_declarator_prime
+    | LPAREN identifier_list RPAREN
     ;
 
 pointer
-    :   (ASTERISK type_qualifier_list?)+
+    :   ASTERISK
+    |   ASTERISK type_qualifier_list
+    |   ASTERISK pointer
+    |   ASTERISK type_qualifier_list pointer
     ;
 
-type_qualifier_list
-    :   type_qualifier+
+// type_qualifier_list
+//     :   type_qualifier
+//     |   type_qualifier_list type_qualifier
+//     ;
+
+type_qualifier_list       
+    :   type_qualifier type_qualifier_list_prime
+    ;
+
+type_qualifier_list_prime 
+    :   /* empty */
+    |   type_qualifier type_qualifier_list_prime
     ;
 
 parameter_type_list
-    :   parameter_list (COMMA ELLIPSIS)?
+    :   parameter_list 
+    |   parameter_list COMMA ELLIPSIS
     ;
 
-parameter_list
-    :   parameter_declaration (COMMA parameter_declaration)*
+// parameter_list
+//     :   parameter_declaration
+//     |   parameter_list COMMA parameter_declaration
+//     ;
+
+parameter_list      
+    :   parameter_declaration parameter_list_prime
+    ;
+
+parameter_list_prime: 
+    /* epsilon */
+    |   COMMA parameter_declaration parameter_list_prime
     ;
 
 parameter_declaration
@@ -638,39 +840,75 @@ parameter_declaration
     |   declaration_specifiers
     ;
 
-identifier_list
-    :   IDENTIFIER (COMMA IDENTIFIER)*
+// identifier_list
+//     :   IDENTIFIER
+//     |   identifier_list COMMA IDENTIFIER
+//     ;
+
+identifier_list          
+    :   IDENTIFIER identifier_list_prime
+    ;
+
+identifier_list_prime    
+    :   /* empty */
+    |   COMMA IDENTIFIER identifier_list_prime
     ;
 
 type_name
-    :   specifier_qualifier_list abstract_declarator?
+    :   specifier_qualifier_list 
+    |   specifier_qualifier_list abstract_declarator
     ;
 
 abstract_declarator
     :   pointer
-    |   pointer? direct_abstract_declarator
+    |   direct_abstract_declarator
+    |   pointer direct_abstract_declarator
     ;
 
-// TODO Remove left recursion
-direct_abstract_declarator
-    :   LPAREN abstract_declarator RPAREN
-    |   LBRACKET constant_expression? RBRACKET
-    |   direct_abstract_declarator LBRACKET RBRACKET
-    |   direct_abstract_declarator  LBRACKET constant_expression RBRACKET
-    |   LPAREN RPAREN
-    |   LPAREN parameter_type_list RPAREN
-    |   direct_abstract_declarator LPAREN RPAREN
-    |   direct_abstract_declarator LPAREN parameter_type_list RPAREN
+// direct_abstract_declarator
+//     :   LPAREN abstract_declarator RPAREN
+//     |   LBRACKET  RBRACKET
+//     |   LBRACKET constant_expression RBRACKET
+//     |   direct_abstract_declarator LBRACKET RBRACKET
+//     |   direct_abstract_declarator  LBRACKET constant_expression RBRACKET
+//     |   LPAREN RPAREN
+//     |   LPAREN parameter_type_list RPAREN
+//     |   direct_abstract_declarator LPAREN RPAREN
+//     |   direct_abstract_declarator LPAREN parameter_type_list RPAREN
+//     ;
+
+direct_abstract_declarator           
+    :   LPAREN abstract_declarator RPAREN direct_abstract_declarator_prime
     ;
+
+direct_abstract_declarator_prime     
+    :   /* epsilon */
+    |   LBRACKET  RBRACKET direct_abstract_declarator_prime
+    |   LBRACKET constant_expression RBRACKET direct_abstract_declarator_prime
+    |   LPAREN RPAREN direct_abstract_declarator_prime
+    |   LPAREN parameter_type_list RPAREN direct_abstract_declarator_prime
+;
 
 initializer
     :   assignment_expression
-    |   LBRACE initializer_list COMMA? RBRACE
+    |   LBRACE initializer_list  RBRACE
+    |   LBRACE initializer_list COMMA RBRACE
     ;
 
+//  initializer_list
+//      :   initializer
+//      |   initializer_list COMMA initializer
+//      ;
+
 initializer_list
-    :   initializer (COMMA initializer)*
+    : initializer initializer_list_prime
     ;
+
+initializer_list_prime
+    : /* epsilon */
+    | COMMA initializer initializer_list_prime
+    ;
+
 
 statement
 	:	labeled_statement
@@ -682,36 +920,64 @@ statement
 	;
 
 labeled_statement
-	:	IDENTIFIER ':' statement
-	|	CASE constant_expression ':' statement
-	|	DEFAULT ':' statement
+	:	IDENTIFIER COLON statement
+	|	CASE constant_expression COLON statement
+	|	DEFAULT COLON statement
 	;
 
 compound_statement
-    :   LBRACE declaration_list? statement_list? RBRACE
+    :   LBRACE  RBRACE
+    |   LBRACE statement_list RBRACE
+    |   LBRACE declaration_list RBRACE
+    |   LBRACE declaration_list statement_list RBRACE
+    |   LBRACE declaration_list statement_list RBRACE
     ;
+
+//  declaration_list
+//      :   declaration
+//      |   declaration_list declaration
+//      ;
 
 declaration_list
-    :   declaration+
+    : declaration declaration_list_prime
     ;
 
+declaration_list_prime
+    : /* epsilon */
+    | declaration declaration_list_prime
+    ;
+
+
+// statement_list
+//     :   statement
+//     |   statement_list statement
+//     ;
+
 statement_list
-    : statement+
+    : statement statement_list_prime
+    ;
+
+statement_list_prime
+    : /* epsilon */
+    | statement statement_list_prime
     ;
 
 expression_statement
-    : expression? SCOLON
+    :   SCOLON
+    |   expression SCOLON
     ;
 
 selection_statement
-    :   IF LPAREN expression RPAREN statement (ELSE statement)?
+    :   IF LPAREN expression RPAREN statement
+    |   IF LPAREN expression RPAREN statement ELSE statement
     |   SWITCH LPAREN expression RPAREN statement
     ;
 
 iteration_statement
     :   WHILE LPAREN expression RPAREN statement
     |   DO statement WHILE LPAREN expression RPAREN
-    |   FOR LPAREN expression_statement expression_statement expression? RPAREN statement
+    |   FOR LPAREN expression_statement expression_statement  RPAREN statement
+    |   FOR LPAREN expression_statement expression_statement expression RPAREN statement
     ;
 
 jump_statement
@@ -722,8 +988,18 @@ jump_statement
     |	RETURN expression SCOLON
     ;
 
+// translation_unit
+//     : external_declaration
+//     | translation_unit external_declaration
+//     ;
+
 translation_unit
-    : external_declaration+
+    : external_declaration translation_unit_prime
+    ;
+
+translation_unit_prime
+    : /* epsilon */
+    | translation_unit external_declaration
     ;
 
 external_declaration
