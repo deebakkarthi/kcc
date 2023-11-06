@@ -778,15 +778,17 @@ declarator
 //     ;
 
 direct_declarator          
-    :   IDENTIFIER direct_declarator_prime;
+    :   IDENTIFIER direct_declarator_prime
+    |   LPAREN declarator RPAREN direct_declarator_prime
+    ;
 
 direct_declarator_prime    
-    :   /* epsilon */
-    | LPAREN declarator RPAREN direct_declarator_prime
-    | LBRACKET constant_expression RBRACKET direct_declarator_prime
+    : LBRACKET constant_expression RBRACKET direct_declarator_prime
     | LBRACKET RBRACKET direct_declarator_prime
     | LPAREN parameter_type_list RPAREN direct_declarator_prime
-    | LPAREN identifier_list RPAREN
+    | LPAREN identifier_list RPAREN direct_declarator_prime
+    | LPAREN RPAREN direct_declarator_prime
+    | /*epsilon*/
     ;
 
 pointer
@@ -983,13 +985,14 @@ jump_statement
     |	RETURN expression SCOLON
     ;
 
-// translation_unit
-//     : external_declaration
-//     | translation_unit external_declaration
-//     ;
+//translation_unit
+//    : external_declaration
+//    | translation_unit external_declaration
+//    ;
 
 translation_unit
-    : external_declaration translation_unit_prime
+    : external_declaration
+    | external_declaration translation_unit_prime
     ;
 
 translation_unit_prime
