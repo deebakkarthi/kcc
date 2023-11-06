@@ -1,4 +1,4 @@
-// Generated from /Users/deebakkarthi/.local/src/kcc/lexer/src/C.g4 by ANTLR 4.12.0
+// Generated from /Users/deebakkarthi/.local/src/kcc/src/C.g4 by ANTLR 4.13.1
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -100,6 +100,18 @@ public class CBaseListener implements CListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterMultiplicative_expression_prime(CParser.Multiplicative_expression_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitMultiplicative_expression_prime(CParser.Multiplicative_expression_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterAddictive_expression(CParser.Addictive_expressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -107,6 +119,18 @@ public class CBaseListener implements CListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitAddictive_expression(CParser.Addictive_expressionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterAddictive_expression_prime(CParser.Addictive_expression_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAddictive_expression_prime(CParser.Addictive_expression_primeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -124,6 +148,18 @@ public class CBaseListener implements CListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterShift_expression_prime(CParser.Shift_expression_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitShift_expression_prime(CParser.Shift_expression_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterRelational_expression(CParser.Relational_expressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -131,6 +167,18 @@ public class CBaseListener implements CListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitRelational_expression(CParser.Relational_expressionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterRelational_expression_prime(CParser.Relational_expression_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitRelational_expression_prime(CParser.Relational_expression_primeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -148,6 +196,18 @@ public class CBaseListener implements CListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterEquality_expression_prime(CParser.Equality_expression_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitEquality_expression_prime(CParser.Equality_expression_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterBit_and_expression(CParser.Bit_and_expressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -155,6 +215,18 @@ public class CBaseListener implements CListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitBit_and_expression(CParser.Bit_and_expressionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterBit_and_expression_prime(CParser.Bit_and_expression_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitBit_and_expression_prime(CParser.Bit_and_expression_primeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -172,6 +244,18 @@ public class CBaseListener implements CListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterXor_expression_prime(CParser.Xor_expression_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitXor_expression_prime(CParser.Xor_expression_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterBit_or_expression(CParser.Bit_or_expressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -179,6 +263,18 @@ public class CBaseListener implements CListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitBit_or_expression(CParser.Bit_or_expressionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterBit_or_expression_prime(CParser.Bit_or_expression_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitBit_or_expression_prime(CParser.Bit_or_expression_primeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -196,6 +292,18 @@ public class CBaseListener implements CListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterLogical_and_expression_prime(CParser.Logical_and_expression_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitLogical_and_expression_prime(CParser.Logical_and_expression_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterLogical_or_expression(CParser.Logical_or_expressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -203,6 +311,18 @@ public class CBaseListener implements CListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitLogical_or_expression(CParser.Logical_or_expressionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterLogical_or_expression_prime(CParser.Logical_or_expression_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitLogical_or_expression_prime(CParser.Logical_or_expression_primeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -256,6 +376,18 @@ public class CBaseListener implements CListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterExpression_prime(CParser.Expression_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitExpression_prime(CParser.Expression_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterConstant_expression(CParser.Constant_expressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -287,18 +419,6 @@ public class CBaseListener implements CListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitDeclaration_specifiers(CParser.Declaration_specifiersContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterDeclaration_specifier(CParser.Declaration_specifierContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitDeclaration_specifier(CParser.Declaration_specifierContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -388,6 +508,18 @@ public class CBaseListener implements CListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterStruct_declaration_list_prime(CParser.Struct_declaration_list_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitStruct_declaration_list_prime(CParser.Struct_declaration_list_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterStruct_declaration(CParser.Struct_declarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -424,6 +556,18 @@ public class CBaseListener implements CListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterStruct_declarator_list_prime(CParser.Struct_declarator_list_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitStruct_declarator_list_prime(CParser.Struct_declarator_list_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterStruct_declarator(CParser.Struct_declaratorContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -455,6 +599,18 @@ public class CBaseListener implements CListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitEnumerator_list(CParser.Enumerator_listContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterEnumerator_list_prime(CParser.Enumerator_list_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitEnumerator_list_prime(CParser.Enumerator_list_primeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -508,6 +664,18 @@ public class CBaseListener implements CListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterDirect_declarator_prime(CParser.Direct_declarator_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDirect_declarator_prime(CParser.Direct_declarator_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterPointer(CParser.PointerContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -527,6 +695,18 @@ public class CBaseListener implements CListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitType_qualifier_list(CParser.Type_qualifier_listContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterType_qualifier_list_prime(CParser.Type_qualifier_list_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitType_qualifier_list_prime(CParser.Type_qualifier_list_primeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -556,6 +736,18 @@ public class CBaseListener implements CListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterParameter_list_prime(CParser.Parameter_list_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitParameter_list_prime(CParser.Parameter_list_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterParameter_declaration(CParser.Parameter_declarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -575,6 +767,18 @@ public class CBaseListener implements CListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitIdentifier_list(CParser.Identifier_listContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterIdentifier_list_prime(CParser.Identifier_list_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitIdentifier_list_prime(CParser.Identifier_list_primeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -616,6 +820,18 @@ public class CBaseListener implements CListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterDirect_abstract_declarator_prime(CParser.Direct_abstract_declarator_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDirect_abstract_declarator_prime(CParser.Direct_abstract_declarator_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterInitializer(CParser.InitializerContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -635,6 +851,18 @@ public class CBaseListener implements CListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitInitializer_list(CParser.Initializer_listContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterInitializer_list_prime(CParser.Initializer_list_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitInitializer_list_prime(CParser.Initializer_list_primeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -688,6 +916,18 @@ public class CBaseListener implements CListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterDeclaration_list_prime(CParser.Declaration_list_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitDeclaration_list_prime(CParser.Declaration_list_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterStatement_list(CParser.Statement_listContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -695,6 +935,18 @@ public class CBaseListener implements CListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitStatement_list(CParser.Statement_listContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterStatement_list_prime(CParser.Statement_list_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitStatement_list_prime(CParser.Statement_list_primeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -755,6 +1007,18 @@ public class CBaseListener implements CListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitTranslation_unit(CParser.Translation_unitContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterTranslation_unit_prime(CParser.Translation_unit_primeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTranslation_unit_prime(CParser.Translation_unit_primeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

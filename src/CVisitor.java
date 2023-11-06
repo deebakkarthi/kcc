@@ -1,4 +1,4 @@
-// Generated from /Users/deebakkarthi/.local/src/kcc/lexer/src/C.g4 by ANTLR 4.12.0
+// Generated from /Users/deebakkarthi/.local/src/kcc/src/C.g4 by ANTLR 4.13.1
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
@@ -52,11 +52,23 @@ public interface CVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitMultiplicative_expression(CParser.Multiplicative_expressionContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link CParser#multiplicative_expression_prime}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitMultiplicative_expression_prime(CParser.Multiplicative_expression_primeContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link CParser#addictive_expression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitAddictive_expression(CParser.Addictive_expressionContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link CParser#addictive_expression_prime}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAddictive_expression_prime(CParser.Addictive_expression_primeContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link CParser#shift_expression}.
 	 * @param ctx the parse tree
@@ -64,11 +76,23 @@ public interface CVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitShift_expression(CParser.Shift_expressionContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link CParser#shift_expression_prime}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitShift_expression_prime(CParser.Shift_expression_primeContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link CParser#relational_expression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitRelational_expression(CParser.Relational_expressionContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link CParser#relational_expression_prime}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitRelational_expression_prime(CParser.Relational_expression_primeContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link CParser#equality_expression}.
 	 * @param ctx the parse tree
@@ -76,11 +100,23 @@ public interface CVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitEquality_expression(CParser.Equality_expressionContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link CParser#equality_expression_prime}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitEquality_expression_prime(CParser.Equality_expression_primeContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link CParser#bit_and_expression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitBit_and_expression(CParser.Bit_and_expressionContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link CParser#bit_and_expression_prime}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitBit_and_expression_prime(CParser.Bit_and_expression_primeContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link CParser#xor_expression}.
 	 * @param ctx the parse tree
@@ -88,11 +124,23 @@ public interface CVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitXor_expression(CParser.Xor_expressionContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link CParser#xor_expression_prime}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitXor_expression_prime(CParser.Xor_expression_primeContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link CParser#bit_or_expression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitBit_or_expression(CParser.Bit_or_expressionContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link CParser#bit_or_expression_prime}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitBit_or_expression_prime(CParser.Bit_or_expression_primeContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link CParser#logical_and_expression}.
 	 * @param ctx the parse tree
@@ -100,11 +148,23 @@ public interface CVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitLogical_and_expression(CParser.Logical_and_expressionContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link CParser#logical_and_expression_prime}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitLogical_and_expression_prime(CParser.Logical_and_expression_primeContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link CParser#logical_or_expression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitLogical_or_expression(CParser.Logical_or_expressionContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link CParser#logical_or_expression_prime}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitLogical_or_expression_prime(CParser.Logical_or_expression_primeContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link CParser#conditional_expression}.
 	 * @param ctx the parse tree
@@ -130,6 +190,12 @@ public interface CVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitExpression(CParser.ExpressionContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link CParser#expression_prime}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExpression_prime(CParser.Expression_primeContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link CParser#constant_expression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -147,12 +213,6 @@ public interface CVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitDeclaration_specifiers(CParser.Declaration_specifiersContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link CParser#declaration_specifier}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitDeclaration_specifier(CParser.Declaration_specifierContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link CParser#init_declaration_list}.
 	 * @param ctx the parse tree
@@ -196,6 +256,12 @@ public interface CVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitStruct_declaration_list(CParser.Struct_declaration_listContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link CParser#struct_declaration_list_prime}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitStruct_declaration_list_prime(CParser.Struct_declaration_list_primeContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link CParser#struct_declaration}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -214,6 +280,12 @@ public interface CVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitStruct_declarator_list(CParser.Struct_declarator_listContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link CParser#struct_declarator_list_prime}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitStruct_declarator_list_prime(CParser.Struct_declarator_list_primeContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link CParser#struct_declarator}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -231,6 +303,12 @@ public interface CVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitEnumerator_list(CParser.Enumerator_listContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link CParser#enumerator_list_prime}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitEnumerator_list_prime(CParser.Enumerator_list_primeContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link CParser#enumerator}.
 	 * @param ctx the parse tree
@@ -256,6 +334,12 @@ public interface CVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitDirect_declarator(CParser.Direct_declaratorContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link CParser#direct_declarator_prime}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDirect_declarator_prime(CParser.Direct_declarator_primeContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link CParser#pointer}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -267,6 +351,12 @@ public interface CVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitType_qualifier_list(CParser.Type_qualifier_listContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link CParser#type_qualifier_list_prime}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitType_qualifier_list_prime(CParser.Type_qualifier_list_primeContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link CParser#parameter_type_list}.
 	 * @param ctx the parse tree
@@ -280,6 +370,12 @@ public interface CVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitParameter_list(CParser.Parameter_listContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link CParser#parameter_list_prime}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitParameter_list_prime(CParser.Parameter_list_primeContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link CParser#parameter_declaration}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -291,6 +387,12 @@ public interface CVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitIdentifier_list(CParser.Identifier_listContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link CParser#identifier_list_prime}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIdentifier_list_prime(CParser.Identifier_list_primeContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link CParser#type_name}.
 	 * @param ctx the parse tree
@@ -310,6 +412,12 @@ public interface CVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitDirect_abstract_declarator(CParser.Direct_abstract_declaratorContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link CParser#direct_abstract_declarator_prime}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDirect_abstract_declarator_prime(CParser.Direct_abstract_declarator_primeContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link CParser#initializer}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -321,6 +429,12 @@ public interface CVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitInitializer_list(CParser.Initializer_listContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link CParser#initializer_list_prime}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitInitializer_list_prime(CParser.Initializer_list_primeContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link CParser#statement}.
 	 * @param ctx the parse tree
@@ -346,11 +460,23 @@ public interface CVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitDeclaration_list(CParser.Declaration_listContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link CParser#declaration_list_prime}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDeclaration_list_prime(CParser.Declaration_list_primeContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link CParser#statement_list}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitStatement_list(CParser.Statement_listContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link CParser#statement_list_prime}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitStatement_list_prime(CParser.Statement_list_primeContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link CParser#expression_statement}.
 	 * @param ctx the parse tree
@@ -381,6 +507,12 @@ public interface CVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitTranslation_unit(CParser.Translation_unitContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link CParser#translation_unit_prime}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitTranslation_unit_prime(CParser.Translation_unit_primeContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link CParser#external_declaration}.
 	 * @param ctx the parse tree

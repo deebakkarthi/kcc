@@ -455,8 +455,7 @@ multiplicative_expression_prime
     |   ASTERISK cast_expression multiplicative_expression_prime
     |   DIV cast_expression multiplicative_expression_prime
     |   MOD cast_expression multiplicative_expression_prime
-;
-
+    ;
 
 // addictive_expression
 //     :   multiplicative_expression
@@ -465,13 +464,13 @@ multiplicative_expression_prime
 //     ;
 
 addictive_expression     
-    : multiplicative_expression addictive_expression_prime
+    :   multiplicative_expression addictive_expression_prime
     ;
 
 addictive_expression_prime    
-    : /* epsilon */
-    | PLUS multiplicative_expression addictive_expression_prime
-    | MINUS multiplicative_expression addictive_expression_prime
+    :   /* epsilon */
+    |   PLUS multiplicative_expression addictive_expression_prime
+    |   MINUS multiplicative_expression addictive_expression_prime
     ;
 
 shift_expression
@@ -483,7 +482,6 @@ shift_expression_prime
     |   LEFT_OP addictive_expression shift_expression_prime
     |   RIGHT_OP addictive_expression shift_expression_prime
     ;
-
 
 // relational_expression
 //     :   shift_expression
@@ -561,7 +559,7 @@ bit_or_expression
 bit_or_expression_prime      
     :   /* epsilon */
     |   OR_OP xor_expression bit_or_expression_prime
-;
+    ;
 
 // logical_and_expression
 //     :   bit_or_expression
@@ -576,7 +574,6 @@ logical_and_expression_prime
     :   /* epsilon */
     |   AND_OP bit_or_expression logical_and_expression_prime
     ;
-
 
 // logical_or_expression
 //     :   logical_and_expression
@@ -627,7 +624,7 @@ expression
 expression_prime    
     :   /* epsilon */
     |   COMMA assignment_expression expression_prime
-;
+    ;
 
 constant_expression
     :   conditional_expression
@@ -679,7 +676,6 @@ type_specifier
 	| enum_specifier
 	;
 
-
 struct_or_union_specifier
 	:   struct_or_union LBRACE struct_declaration_list  RBRACE
 	|   struct_or_union IDENTIFIER LBRACE struct_declaration_list  RBRACE
@@ -701,7 +697,7 @@ struct_declaration_list
     ;
     
 struct_declaration_list_prime         
-    :   /* empty */
+    :   /* epsilon */
     |   struct_declaration struct_declaration_list_prime
     ;
 
@@ -747,14 +743,13 @@ enum_specifier
 //     |   enumerator_list COMMA enumerator
 //     ;
 
-
 enumerator_list      
     :   enumerator enumerator_list_prime
     ;
 
 enumerator_list_prime
     :   /* epsilon */
-    | COMMA enumerator enumerator_list_prime
+    |   COMMA enumerator enumerator_list_prime
     ;
 
 enumerator
@@ -786,7 +781,7 @@ direct_declarator
     :   IDENTIFIER direct_declarator_prime;
 
 direct_declarator_prime    
-    :   /* empty */
+    :   /* epsilon */
     | LPAREN declarator RPAREN direct_declarator_prime
     | LBRACKET constant_expression RBRACKET direct_declarator_prime
     | LBRACKET RBRACKET direct_declarator_prime
@@ -811,7 +806,7 @@ type_qualifier_list
     ;
 
 type_qualifier_list_prime 
-    :   /* empty */
+    :   /* epsilon */
     |   type_qualifier type_qualifier_list_prime
     ;
 
@@ -850,7 +845,7 @@ identifier_list
     ;
 
 identifier_list_prime    
-    :   /* empty */
+    :   /* epsilon */
     |   COMMA IDENTIFIER identifier_list_prime
     ;
 
@@ -887,7 +882,7 @@ direct_abstract_declarator_prime
     |   LBRACKET constant_expression RBRACKET direct_abstract_declarator_prime
     |   LPAREN RPAREN direct_abstract_declarator_prime
     |   LPAREN parameter_type_list RPAREN direct_abstract_declarator_prime
-;
+    ;
 
 initializer
     :   assignment_expression

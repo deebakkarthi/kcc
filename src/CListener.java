@@ -1,4 +1,4 @@
-// Generated from /Users/deebakkarthi/.local/src/kcc/lexer/src/C.g4 by ANTLR 4.12.0
+// Generated from /Users/deebakkarthi/.local/src/kcc/src/C.g4 by ANTLR 4.13.1
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -77,6 +77,16 @@ public interface CListener extends ParseTreeListener {
 	 */
 	void exitMultiplicative_expression(CParser.Multiplicative_expressionContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link CParser#multiplicative_expression_prime}.
+	 * @param ctx the parse tree
+	 */
+	void enterMultiplicative_expression_prime(CParser.Multiplicative_expression_primeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CParser#multiplicative_expression_prime}.
+	 * @param ctx the parse tree
+	 */
+	void exitMultiplicative_expression_prime(CParser.Multiplicative_expression_primeContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link CParser#addictive_expression}.
 	 * @param ctx the parse tree
 	 */
@@ -86,6 +96,16 @@ public interface CListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitAddictive_expression(CParser.Addictive_expressionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link CParser#addictive_expression_prime}.
+	 * @param ctx the parse tree
+	 */
+	void enterAddictive_expression_prime(CParser.Addictive_expression_primeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CParser#addictive_expression_prime}.
+	 * @param ctx the parse tree
+	 */
+	void exitAddictive_expression_prime(CParser.Addictive_expression_primeContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link CParser#shift_expression}.
 	 * @param ctx the parse tree
@@ -97,6 +117,16 @@ public interface CListener extends ParseTreeListener {
 	 */
 	void exitShift_expression(CParser.Shift_expressionContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link CParser#shift_expression_prime}.
+	 * @param ctx the parse tree
+	 */
+	void enterShift_expression_prime(CParser.Shift_expression_primeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CParser#shift_expression_prime}.
+	 * @param ctx the parse tree
+	 */
+	void exitShift_expression_prime(CParser.Shift_expression_primeContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link CParser#relational_expression}.
 	 * @param ctx the parse tree
 	 */
@@ -106,6 +136,16 @@ public interface CListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitRelational_expression(CParser.Relational_expressionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link CParser#relational_expression_prime}.
+	 * @param ctx the parse tree
+	 */
+	void enterRelational_expression_prime(CParser.Relational_expression_primeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CParser#relational_expression_prime}.
+	 * @param ctx the parse tree
+	 */
+	void exitRelational_expression_prime(CParser.Relational_expression_primeContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link CParser#equality_expression}.
 	 * @param ctx the parse tree
@@ -117,6 +157,16 @@ public interface CListener extends ParseTreeListener {
 	 */
 	void exitEquality_expression(CParser.Equality_expressionContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link CParser#equality_expression_prime}.
+	 * @param ctx the parse tree
+	 */
+	void enterEquality_expression_prime(CParser.Equality_expression_primeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CParser#equality_expression_prime}.
+	 * @param ctx the parse tree
+	 */
+	void exitEquality_expression_prime(CParser.Equality_expression_primeContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link CParser#bit_and_expression}.
 	 * @param ctx the parse tree
 	 */
@@ -126,6 +176,16 @@ public interface CListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitBit_and_expression(CParser.Bit_and_expressionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link CParser#bit_and_expression_prime}.
+	 * @param ctx the parse tree
+	 */
+	void enterBit_and_expression_prime(CParser.Bit_and_expression_primeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CParser#bit_and_expression_prime}.
+	 * @param ctx the parse tree
+	 */
+	void exitBit_and_expression_prime(CParser.Bit_and_expression_primeContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link CParser#xor_expression}.
 	 * @param ctx the parse tree
@@ -137,6 +197,16 @@ public interface CListener extends ParseTreeListener {
 	 */
 	void exitXor_expression(CParser.Xor_expressionContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link CParser#xor_expression_prime}.
+	 * @param ctx the parse tree
+	 */
+	void enterXor_expression_prime(CParser.Xor_expression_primeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CParser#xor_expression_prime}.
+	 * @param ctx the parse tree
+	 */
+	void exitXor_expression_prime(CParser.Xor_expression_primeContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link CParser#bit_or_expression}.
 	 * @param ctx the parse tree
 	 */
@@ -146,6 +216,16 @@ public interface CListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitBit_or_expression(CParser.Bit_or_expressionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link CParser#bit_or_expression_prime}.
+	 * @param ctx the parse tree
+	 */
+	void enterBit_or_expression_prime(CParser.Bit_or_expression_primeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CParser#bit_or_expression_prime}.
+	 * @param ctx the parse tree
+	 */
+	void exitBit_or_expression_prime(CParser.Bit_or_expression_primeContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link CParser#logical_and_expression}.
 	 * @param ctx the parse tree
@@ -157,6 +237,16 @@ public interface CListener extends ParseTreeListener {
 	 */
 	void exitLogical_and_expression(CParser.Logical_and_expressionContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link CParser#logical_and_expression_prime}.
+	 * @param ctx the parse tree
+	 */
+	void enterLogical_and_expression_prime(CParser.Logical_and_expression_primeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CParser#logical_and_expression_prime}.
+	 * @param ctx the parse tree
+	 */
+	void exitLogical_and_expression_prime(CParser.Logical_and_expression_primeContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link CParser#logical_or_expression}.
 	 * @param ctx the parse tree
 	 */
@@ -166,6 +256,16 @@ public interface CListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitLogical_or_expression(CParser.Logical_or_expressionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link CParser#logical_or_expression_prime}.
+	 * @param ctx the parse tree
+	 */
+	void enterLogical_or_expression_prime(CParser.Logical_or_expression_primeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CParser#logical_or_expression_prime}.
+	 * @param ctx the parse tree
+	 */
+	void exitLogical_or_expression_prime(CParser.Logical_or_expression_primeContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link CParser#conditional_expression}.
 	 * @param ctx the parse tree
@@ -207,6 +307,16 @@ public interface CListener extends ParseTreeListener {
 	 */
 	void exitExpression(CParser.ExpressionContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link CParser#expression_prime}.
+	 * @param ctx the parse tree
+	 */
+	void enterExpression_prime(CParser.Expression_primeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CParser#expression_prime}.
+	 * @param ctx the parse tree
+	 */
+	void exitExpression_prime(CParser.Expression_primeContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link CParser#constant_expression}.
 	 * @param ctx the parse tree
 	 */
@@ -236,16 +346,6 @@ public interface CListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitDeclaration_specifiers(CParser.Declaration_specifiersContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link CParser#declaration_specifier}.
-	 * @param ctx the parse tree
-	 */
-	void enterDeclaration_specifier(CParser.Declaration_specifierContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link CParser#declaration_specifier}.
-	 * @param ctx the parse tree
-	 */
-	void exitDeclaration_specifier(CParser.Declaration_specifierContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link CParser#init_declaration_list}.
 	 * @param ctx the parse tree
@@ -317,6 +417,16 @@ public interface CListener extends ParseTreeListener {
 	 */
 	void exitStruct_declaration_list(CParser.Struct_declaration_listContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link CParser#struct_declaration_list_prime}.
+	 * @param ctx the parse tree
+	 */
+	void enterStruct_declaration_list_prime(CParser.Struct_declaration_list_primeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CParser#struct_declaration_list_prime}.
+	 * @param ctx the parse tree
+	 */
+	void exitStruct_declaration_list_prime(CParser.Struct_declaration_list_primeContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link CParser#struct_declaration}.
 	 * @param ctx the parse tree
 	 */
@@ -347,6 +457,16 @@ public interface CListener extends ParseTreeListener {
 	 */
 	void exitStruct_declarator_list(CParser.Struct_declarator_listContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link CParser#struct_declarator_list_prime}.
+	 * @param ctx the parse tree
+	 */
+	void enterStruct_declarator_list_prime(CParser.Struct_declarator_list_primeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CParser#struct_declarator_list_prime}.
+	 * @param ctx the parse tree
+	 */
+	void exitStruct_declarator_list_prime(CParser.Struct_declarator_list_primeContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link CParser#struct_declarator}.
 	 * @param ctx the parse tree
 	 */
@@ -376,6 +496,16 @@ public interface CListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitEnumerator_list(CParser.Enumerator_listContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link CParser#enumerator_list_prime}.
+	 * @param ctx the parse tree
+	 */
+	void enterEnumerator_list_prime(CParser.Enumerator_list_primeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CParser#enumerator_list_prime}.
+	 * @param ctx the parse tree
+	 */
+	void exitEnumerator_list_prime(CParser.Enumerator_list_primeContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link CParser#enumerator}.
 	 * @param ctx the parse tree
@@ -417,6 +547,16 @@ public interface CListener extends ParseTreeListener {
 	 */
 	void exitDirect_declarator(CParser.Direct_declaratorContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link CParser#direct_declarator_prime}.
+	 * @param ctx the parse tree
+	 */
+	void enterDirect_declarator_prime(CParser.Direct_declarator_primeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CParser#direct_declarator_prime}.
+	 * @param ctx the parse tree
+	 */
+	void exitDirect_declarator_prime(CParser.Direct_declarator_primeContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link CParser#pointer}.
 	 * @param ctx the parse tree
 	 */
@@ -436,6 +576,16 @@ public interface CListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitType_qualifier_list(CParser.Type_qualifier_listContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link CParser#type_qualifier_list_prime}.
+	 * @param ctx the parse tree
+	 */
+	void enterType_qualifier_list_prime(CParser.Type_qualifier_list_primeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CParser#type_qualifier_list_prime}.
+	 * @param ctx the parse tree
+	 */
+	void exitType_qualifier_list_prime(CParser.Type_qualifier_list_primeContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link CParser#parameter_type_list}.
 	 * @param ctx the parse tree
@@ -457,6 +607,16 @@ public interface CListener extends ParseTreeListener {
 	 */
 	void exitParameter_list(CParser.Parameter_listContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link CParser#parameter_list_prime}.
+	 * @param ctx the parse tree
+	 */
+	void enterParameter_list_prime(CParser.Parameter_list_primeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CParser#parameter_list_prime}.
+	 * @param ctx the parse tree
+	 */
+	void exitParameter_list_prime(CParser.Parameter_list_primeContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link CParser#parameter_declaration}.
 	 * @param ctx the parse tree
 	 */
@@ -476,6 +636,16 @@ public interface CListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitIdentifier_list(CParser.Identifier_listContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link CParser#identifier_list_prime}.
+	 * @param ctx the parse tree
+	 */
+	void enterIdentifier_list_prime(CParser.Identifier_list_primeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CParser#identifier_list_prime}.
+	 * @param ctx the parse tree
+	 */
+	void exitIdentifier_list_prime(CParser.Identifier_list_primeContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link CParser#type_name}.
 	 * @param ctx the parse tree
@@ -507,6 +677,16 @@ public interface CListener extends ParseTreeListener {
 	 */
 	void exitDirect_abstract_declarator(CParser.Direct_abstract_declaratorContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link CParser#direct_abstract_declarator_prime}.
+	 * @param ctx the parse tree
+	 */
+	void enterDirect_abstract_declarator_prime(CParser.Direct_abstract_declarator_primeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CParser#direct_abstract_declarator_prime}.
+	 * @param ctx the parse tree
+	 */
+	void exitDirect_abstract_declarator_prime(CParser.Direct_abstract_declarator_primeContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link CParser#initializer}.
 	 * @param ctx the parse tree
 	 */
@@ -526,6 +706,16 @@ public interface CListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitInitializer_list(CParser.Initializer_listContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link CParser#initializer_list_prime}.
+	 * @param ctx the parse tree
+	 */
+	void enterInitializer_list_prime(CParser.Initializer_list_primeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CParser#initializer_list_prime}.
+	 * @param ctx the parse tree
+	 */
+	void exitInitializer_list_prime(CParser.Initializer_list_primeContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link CParser#statement}.
 	 * @param ctx the parse tree
@@ -567,6 +757,16 @@ public interface CListener extends ParseTreeListener {
 	 */
 	void exitDeclaration_list(CParser.Declaration_listContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link CParser#declaration_list_prime}.
+	 * @param ctx the parse tree
+	 */
+	void enterDeclaration_list_prime(CParser.Declaration_list_primeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CParser#declaration_list_prime}.
+	 * @param ctx the parse tree
+	 */
+	void exitDeclaration_list_prime(CParser.Declaration_list_primeContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link CParser#statement_list}.
 	 * @param ctx the parse tree
 	 */
@@ -576,6 +776,16 @@ public interface CListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitStatement_list(CParser.Statement_listContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link CParser#statement_list_prime}.
+	 * @param ctx the parse tree
+	 */
+	void enterStatement_list_prime(CParser.Statement_list_primeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CParser#statement_list_prime}.
+	 * @param ctx the parse tree
+	 */
+	void exitStatement_list_prime(CParser.Statement_list_primeContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link CParser#expression_statement}.
 	 * @param ctx the parse tree
@@ -626,6 +836,16 @@ public interface CListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitTranslation_unit(CParser.Translation_unitContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link CParser#translation_unit_prime}.
+	 * @param ctx the parse tree
+	 */
+	void enterTranslation_unit_prime(CParser.Translation_unit_primeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link CParser#translation_unit_prime}.
+	 * @param ctx the parse tree
+	 */
+	void exitTranslation_unit_prime(CParser.Translation_unit_primeContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link CParser#external_declaration}.
 	 * @param ctx the parse tree
