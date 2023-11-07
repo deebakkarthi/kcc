@@ -330,7 +330,7 @@ COMMA
 	:	','
 	;
 COLON
-	:	' :'
+	:	':'
 	;
 ASSIGN
 	:	'='
@@ -413,9 +413,13 @@ postfix_expression
     ;
 
 argument_expression_list
-	:   assignment_expression
-	|   assignment_expression COMMA assignment_expression
+	:   assignment_expression arguement_expresion_list_prime
 	;
+
+arguement_expresion_list_prime
+    : COMMA assignment_expression arguement_expresion_list_prime
+    | /*epsilon*/
+    ;
 
 unary_expression
     :   postfix_expression
@@ -549,16 +553,16 @@ xor_expression_prime
 
 // bit_or_expression
 //     :   xor_expression
-//     |   bit_or_expression OR_OP xor_expression
+//     |   bit_or_expression BITOR xor_expression
 //     ;
 
-bit_or_expression            
+bit_or_expression
     :   xor_expression bit_or_expression_prime
     ;
 
-bit_or_expression_prime      
+bit_or_expression_prime
     :   /* epsilon */
-    |   OR_OP xor_expression bit_or_expression_prime
+    |   BITOR xor_expression bit_or_expression_prime
     ;
 
 // logical_and_expression
@@ -632,7 +636,7 @@ constant_expression
 
 declaration
     :   declaration_specifiers SCOLON
-    |   declaration_specifiers init_declaration_list SCOLON
+    |   declaration_specifiers init_declarator_list SCOLON
     ;
 
 declaration_specifiers
@@ -644,10 +648,20 @@ declaration_specifiers
     |   type_qualifier declaration_specifiers
     ;
 
-init_declaration_list
-    :   init_declarator
-    |   init_declarator COMMA init_declarator
+//init_declarator_list
+//    :   init_declarator
+//    |   init_declarator_list COMMA init_declarator
+//    ;
+
+init_declarator_list
+    :   init_declarator init_declarator_list_prime
     ;
+
+init_declarator_list_prime
+    :   init_declarator init_declarator_list_prime
+    |   /*epsilon*/
+    ;
+
 
 init_declarator
     :   declarator
@@ -927,7 +941,6 @@ compound_statement
     |   LBRACE statement_list RBRACE
     |   LBRACE declaration_list RBRACE
     |   LBRACE declaration_list statement_list RBRACE
-    |   LBRACE declaration_list statement_list RBRACE
     ;
 
 //  declaration_list
@@ -986,18 +999,21 @@ jump_statement
     ;
 
 //translation_unit
+//  : external_declaration+
+//  ;
+
+//translation_unit
 //    : external_declaration
 //    | translation_unit external_declaration
 //    ;
 
 translation_unit
-    : external_declaration
-    | external_declaration translation_unit_prime
+    : external_declaration translation_unit_prime
     ;
 
 translation_unit_prime
-    : /* epsilon */
-    | translation_unit external_declaration
+    : external_declaration translation_unit_prime
+    | /*epsilon*/
     ;
 
 external_declaration
