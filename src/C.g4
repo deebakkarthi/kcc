@@ -394,6 +394,9 @@ WS
     ;
 
 // Parser Rules
+
+
+// BEGIN: Expression
 primary_expression
     :   IDENTIFIER
     |   CONSTANT
@@ -633,7 +636,9 @@ expression_prime
 constant_expression
     :   conditional_expression
     ;
+// END: Expression
 
+// BEGIN: Declarations
 declaration
     :   declaration_specifiers SCOLON
     |   declaration_specifiers init_declarator_list SCOLON
@@ -658,7 +663,7 @@ init_declarator_list
     ;
 
 init_declarator_list_prime
-    :   init_declarator init_declarator_list_prime
+    :   COMMA init_declarator init_declarator_list_prime
     |   /*epsilon*/
     ;
 
@@ -919,8 +924,9 @@ initializer_list_prime
     : /* epsilon */
     | COMMA initializer initializer_list_prime
     ;
+// END: Declarations
 
-
+// BEGIN: Statements
 statement
 	:	labeled_statement
 	|	compound_statement
@@ -998,6 +1004,8 @@ jump_statement
     |	RETURN expression SCOLON
     ;
 
+//END: Statements
+
 //translation_unit
 //  : external_declaration+
 //  ;
@@ -1006,6 +1014,7 @@ jump_statement
 //    : external_declaration
 //    | translation_unit external_declaration
 //    ;
+
 
 translation_unit
     : external_declaration translation_unit_prime
