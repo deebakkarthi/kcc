@@ -609,6 +609,7 @@ assignment_expression
 assignment_operator
     :   ASSIGN
     |   MUL_ASSIGN
+    |   DIV_ASSIGN
     |	MOD_ASSIGN
     |	ADD_ASSIGN
     |	SUB_ASSIGN
@@ -895,6 +896,10 @@ abstract_declarator
 
 direct_abstract_declarator           
     :   LPAREN abstract_declarator RPAREN direct_abstract_declarator_prime
+    |   LBRACKET  RBRACKET direct_abstract_declarator_prime
+    |   LBRACKET constant_expression RBRACKET direct_abstract_declarator_prime
+    |   LPAREN RPAREN direct_abstract_declarator_prime
+    |   LPAREN parameter_type_list RPAREN direct_abstract_declarator_prime
     ;
 
 direct_abstract_declarator_prime     
