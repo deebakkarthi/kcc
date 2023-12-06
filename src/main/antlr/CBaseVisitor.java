@@ -1,4 +1,5 @@
-// Generated from /Users/deebakkarthi/.local/src/kcc/src/C.g4 by ANTLR 4.13.1
+// Generated from /Users/deebakkarthi/.local/src/kcc/src/main/antlr/C.g4 by ANTLR 4.13.1
+package main.antlr;
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 /**
@@ -17,203 +18,210 @@ public class CBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements CVis
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitPrimary_expression(CParser.Primary_expressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitPrimaryExpression(CParser.PrimaryExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitPostfix_expression(CParser.Postfix_expressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitPostfixExpression(CParser.PostfixExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitArgument_expression_list(CParser.Argument_expression_listContext ctx) { return visitChildren(ctx); }
+	@Override public T visitArgumentExpressionList(CParser.ArgumentExpressionListContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitUnary_expression(CParser.Unary_expressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitArguementExpresionListPrime(CParser.ArguementExpresionListPrimeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitUnary_operator(CParser.Unary_operatorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitUnaryExpression(CParser.UnaryExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitCast_expression(CParser.Cast_expressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitUnaryOperator(CParser.UnaryOperatorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitMultiplicative_expression(CParser.Multiplicative_expressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitCastExpression(CParser.CastExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitMultiplicative_expression_prime(CParser.Multiplicative_expression_primeContext ctx) { return visitChildren(ctx); }
+	@Override public T visitMultiplicativeExpression(CParser.MultiplicativeExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAddictive_expression(CParser.Addictive_expressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitMultiplicativeExpressionPrime(CParser.MultiplicativeExpressionPrimeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAddictive_expression_prime(CParser.Addictive_expression_primeContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAddictiveExpression(CParser.AddictiveExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitShift_expression(CParser.Shift_expressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAddictiveExpressionPrime(CParser.AddictiveExpressionPrimeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitShift_expression_prime(CParser.Shift_expression_primeContext ctx) { return visitChildren(ctx); }
+	@Override public T visitShiftExpression(CParser.ShiftExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitRelational_expression(CParser.Relational_expressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitShiftExpressionPrime(CParser.ShiftExpressionPrimeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitRelational_expression_prime(CParser.Relational_expression_primeContext ctx) { return visitChildren(ctx); }
+	@Override public T visitRelationalExpression(CParser.RelationalExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEquality_expression(CParser.Equality_expressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitRelationalExpressionPrime(CParser.RelationalExpressionPrimeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEquality_expression_prime(CParser.Equality_expression_primeContext ctx) { return visitChildren(ctx); }
+	@Override public T visitEqualityExpression(CParser.EqualityExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitBit_and_expression(CParser.Bit_and_expressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitEqualityExpressionPrime(CParser.EqualityExpressionPrimeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitBit_and_expression_prime(CParser.Bit_and_expression_primeContext ctx) { return visitChildren(ctx); }
+	@Override public T visitBitAndExpression(CParser.BitAndExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitXor_expression(CParser.Xor_expressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitBitAndExpressionPrime(CParser.BitAndExpressionPrimeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitXor_expression_prime(CParser.Xor_expression_primeContext ctx) { return visitChildren(ctx); }
+	@Override public T visitXorExpression(CParser.XorExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitBit_or_expression(CParser.Bit_or_expressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitXorExpressionPrime(CParser.XorExpressionPrimeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitBit_or_expression_prime(CParser.Bit_or_expression_primeContext ctx) { return visitChildren(ctx); }
+	@Override public T visitBitOrExpression(CParser.BitOrExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitLogical_and_expression(CParser.Logical_and_expressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitBitOrExpressionPrime(CParser.BitOrExpressionPrimeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitLogical_and_expression_prime(CParser.Logical_and_expression_primeContext ctx) { return visitChildren(ctx); }
+	@Override public T visitLogicalAndExpression(CParser.LogicalAndExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitLogical_or_expression(CParser.Logical_or_expressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitLogicalAndExpressionPrime(CParser.LogicalAndExpressionPrimeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitLogical_or_expression_prime(CParser.Logical_or_expression_primeContext ctx) { return visitChildren(ctx); }
+	@Override public T visitLogicalOrExpression(CParser.LogicalOrExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitConditional_expression(CParser.Conditional_expressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitLogicalOrExpressionPrime(CParser.LogicalOrExpressionPrimeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAssignment_expression(CParser.Assignment_expressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitConditionalExpression(CParser.ConditionalExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAssignment_operator(CParser.Assignment_operatorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAssignmentExpression(CParser.AssignmentExpressionContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitAssignmentOperator(CParser.AssignmentOperatorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -227,14 +235,14 @@ public class CBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements CVis
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitExpression_prime(CParser.Expression_primeContext ctx) { return visitChildren(ctx); }
+	@Override public T visitExpressionPrime(CParser.ExpressionPrimeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitConstant_expression(CParser.Constant_expressionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitConstantExpression(CParser.ConstantExpressionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -248,119 +256,126 @@ public class CBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements CVis
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitDeclaration_specifiers(CParser.Declaration_specifiersContext ctx) { return visitChildren(ctx); }
+	@Override public T visitDeclarationSpecifiers(CParser.DeclarationSpecifiersContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitInit_declaration_list(CParser.Init_declaration_listContext ctx) { return visitChildren(ctx); }
+	@Override public T visitInitDeclaratorList(CParser.InitDeclaratorListContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitInit_declarator(CParser.Init_declaratorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitInitDeclaratorListPrime(CParser.InitDeclaratorListPrimeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitStorage_class_specifier(CParser.Storage_class_specifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitInitDeclarator(CParser.InitDeclaratorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitType_specifier(CParser.Type_specifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitStorageClassSpecifier(CParser.StorageClassSpecifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitStruct_or_union_specifier(CParser.Struct_or_union_specifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTypeSpecifier(CParser.TypeSpecifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitStruct_or_union(CParser.Struct_or_unionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitStructOrUnionSpecifier(CParser.StructOrUnionSpecifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitStruct_declaration_list(CParser.Struct_declaration_listContext ctx) { return visitChildren(ctx); }
+	@Override public T visitStructOrUnion(CParser.StructOrUnionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitStruct_declaration_list_prime(CParser.Struct_declaration_list_primeContext ctx) { return visitChildren(ctx); }
+	@Override public T visitStructDeclarationList(CParser.StructDeclarationListContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitStruct_declaration(CParser.Struct_declarationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitStructDeclarationListPrime(CParser.StructDeclarationListPrimeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitSpecifier_qualifier_list(CParser.Specifier_qualifier_listContext ctx) { return visitChildren(ctx); }
+	@Override public T visitStructDeclaration(CParser.StructDeclarationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitStruct_declarator_list(CParser.Struct_declarator_listContext ctx) { return visitChildren(ctx); }
+	@Override public T visitSpecifierQualifierList(CParser.SpecifierQualifierListContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitStruct_declarator_list_prime(CParser.Struct_declarator_list_primeContext ctx) { return visitChildren(ctx); }
+	@Override public T visitStructDeclaratorList(CParser.StructDeclaratorListContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitStruct_declarator(CParser.Struct_declaratorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitStructDeclaratorListPrime(CParser.StructDeclaratorListPrimeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEnum_specifier(CParser.Enum_specifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitStructDeclarator(CParser.StructDeclaratorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEnumerator_list(CParser.Enumerator_listContext ctx) { return visitChildren(ctx); }
+	@Override public T visitEnumSpecifier(CParser.EnumSpecifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitEnumerator_list_prime(CParser.Enumerator_list_primeContext ctx) { return visitChildren(ctx); }
+	@Override public T visitEnumeratorList(CParser.EnumeratorListContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitEnumeratorListPrime(CParser.EnumeratorListPrimeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -374,7 +389,7 @@ public class CBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements CVis
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitType_qualifier(CParser.Type_qualifierContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTypeQualifier(CParser.TypeQualifierContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -388,14 +403,14 @@ public class CBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements CVis
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitDirect_declarator(CParser.Direct_declaratorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitDirectDeclarator(CParser.DirectDeclaratorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitDirect_declarator_prime(CParser.Direct_declarator_primeContext ctx) { return visitChildren(ctx); }
+	@Override public T visitDirectDeclaratorPrime(CParser.DirectDeclaratorPrimeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -409,84 +424,84 @@ public class CBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements CVis
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitType_qualifier_list(CParser.Type_qualifier_listContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTypeQualifierList(CParser.TypeQualifierListContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitType_qualifier_list_prime(CParser.Type_qualifier_list_primeContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTypeQualifierListPrime(CParser.TypeQualifierListPrimeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitParameter_type_list(CParser.Parameter_type_listContext ctx) { return visitChildren(ctx); }
+	@Override public T visitParameterTypeList(CParser.ParameterTypeListContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitParameter_list(CParser.Parameter_listContext ctx) { return visitChildren(ctx); }
+	@Override public T visitParameterList(CParser.ParameterListContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitParameter_list_prime(CParser.Parameter_list_primeContext ctx) { return visitChildren(ctx); }
+	@Override public T visitParameterListPrime(CParser.ParameterListPrimeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitParameter_declaration(CParser.Parameter_declarationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitParameterDeclaration(CParser.ParameterDeclarationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitIdentifier_list(CParser.Identifier_listContext ctx) { return visitChildren(ctx); }
+	@Override public T visitIdentifierList(CParser.IdentifierListContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitIdentifier_list_prime(CParser.Identifier_list_primeContext ctx) { return visitChildren(ctx); }
+	@Override public T visitIdentifierListPrime(CParser.IdentifierListPrimeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitType_name(CParser.Type_nameContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTypeName(CParser.TypeNameContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitAbstract_declarator(CParser.Abstract_declaratorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitAbstractDeclarator(CParser.AbstractDeclaratorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitDirect_abstract_declarator(CParser.Direct_abstract_declaratorContext ctx) { return visitChildren(ctx); }
+	@Override public T visitDirectAbstractDeclarator(CParser.DirectAbstractDeclaratorContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitDirect_abstract_declarator_prime(CParser.Direct_abstract_declarator_primeContext ctx) { return visitChildren(ctx); }
+	@Override public T visitDirectAbstractDeclaratorPrime(CParser.DirectAbstractDeclaratorPrimeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -500,14 +515,14 @@ public class CBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements CVis
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitInitializer_list(CParser.Initializer_listContext ctx) { return visitChildren(ctx); }
+	@Override public T visitInitializerList(CParser.InitializerListContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitInitializer_list_prime(CParser.Initializer_list_primeContext ctx) { return visitChildren(ctx); }
+	@Override public T visitInitializerListPrime(CParser.InitializerListPrimeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -521,96 +536,96 @@ public class CBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements CVis
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitLabeled_statement(CParser.Labeled_statementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitLabeledStatement(CParser.LabeledStatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitCompound_statement(CParser.Compound_statementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitCompoundStatement(CParser.CompoundStatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitDeclaration_list(CParser.Declaration_listContext ctx) { return visitChildren(ctx); }
+	@Override public T visitDeclarationList(CParser.DeclarationListContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitDeclaration_list_prime(CParser.Declaration_list_primeContext ctx) { return visitChildren(ctx); }
+	@Override public T visitDeclarationListPrime(CParser.DeclarationListPrimeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitStatement_list(CParser.Statement_listContext ctx) { return visitChildren(ctx); }
+	@Override public T visitStatementList(CParser.StatementListContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitStatement_list_prime(CParser.Statement_list_primeContext ctx) { return visitChildren(ctx); }
+	@Override public T visitStatementListPrime(CParser.StatementListPrimeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitExpression_statement(CParser.Expression_statementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitExpressionStatement(CParser.ExpressionStatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitSelection_statement(CParser.Selection_statementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitSelectionStatement(CParser.SelectionStatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitIteration_statement(CParser.Iteration_statementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitIterationStatement(CParser.IterationStatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitJump_statement(CParser.Jump_statementContext ctx) { return visitChildren(ctx); }
+	@Override public T visitJumpStatement(CParser.JumpStatementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTranslation_unit(CParser.Translation_unitContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTranslationUnit(CParser.TranslationUnitContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTranslation_unit_prime(CParser.Translation_unit_primeContext ctx) { return visitChildren(ctx); }
+	@Override public T visitTranslationUnitPrime(CParser.TranslationUnitPrimeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitExternal_declaration(CParser.External_declarationContext ctx) { return visitChildren(ctx); }
+	@Override public T visitExternalDeclaration(CParser.ExternalDeclarationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitFunction_definition(CParser.Function_definitionContext ctx) { return visitChildren(ctx); }
+	@Override public T visitFunctionDefinition(CParser.FunctionDefinitionContext ctx) { return visitChildren(ctx); }
 }
