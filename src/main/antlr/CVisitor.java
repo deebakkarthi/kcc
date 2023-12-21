@@ -1,5 +1,12 @@
 // Generated from /Users/deebakkarthi/.local/src/kcc/src/main/antlr/C.g4 by ANTLR 4.13.1
 package main.antlr;
+
+import org.antlr.v4.runtime.*;
+import java.io.*;
+import java.util.*;
+import main.java.c.*;
+import main.java.utils.*;
+
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
@@ -515,17 +522,17 @@ public interface CVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitJumpStatement(CParser.JumpStatementContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link CParser#translationUnit}.
+	 * Visit a parse tree produced by {@link CParser#program}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitTranslationUnit(CParser.TranslationUnitContext ctx);
+	T visitProgram(CParser.ProgramContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link CParser#translationUnitPrime}.
+	 * Visit a parse tree produced by {@link CParser#programPrime}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitTranslationUnitPrime(CParser.TranslationUnitPrimeContext ctx);
+	T visitProgramPrime(CParser.ProgramPrimeContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link CParser#externalDeclaration}.
 	 * @param ctx the parse tree

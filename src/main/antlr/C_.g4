@@ -1,4 +1,4 @@
-lexer grammar CLexerRules;
+lexer grammar C_;
 
 // Lexer rules
 fragment
@@ -392,4 +392,3 @@ QUESTION
 WS
     :	  [ \r\n\t]+ -> skip
     ;
-

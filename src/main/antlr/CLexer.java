@@ -1,5 +1,12 @@
 // Generated from /Users/deebakkarthi/.local/src/kcc/src/main/antlr/C.g4 by ANTLR 4.13.1
 package main.antlr;
+
+import org.antlr.v4.runtime.*;
+import java.io.*;
+import java.util.*;
+import main.java.c.*;
+import main.java.utils.*;
+
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
@@ -125,6 +132,13 @@ public class CLexer extends Lexer {
 	public Vocabulary getVocabulary() {
 		return VOCABULARY;
 	}
+
+
+	public List<String> vars = new ArrayList<>();
+	public List<String> semanticErrors = new ArrayList<>();
+	public List<String> semanticWarnings = new ArrayList<>();
+	public SymbolTable symbolTable = new SymbolTable();
+	public Program program;
 
 
 	public CLexer(CharStream input) {

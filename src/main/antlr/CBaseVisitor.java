@@ -1,5 +1,12 @@
 // Generated from /Users/deebakkarthi/.local/src/kcc/src/main/antlr/C.g4 by ANTLR 4.13.1
 package main.antlr;
+
+import org.antlr.v4.runtime.*;
+import java.io.*;
+import java.util.*;
+import main.java.c.*;
+import main.java.utils.*;
+
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 /**
@@ -606,14 +613,14 @@ public class CBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements CVis
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTranslationUnit(CParser.TranslationUnitContext ctx) { return visitChildren(ctx); }
+	@Override public T visitProgram(CParser.ProgramContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTranslationUnitPrime(CParser.TranslationUnitPrimeContext ctx) { return visitChildren(ctx); }
+	@Override public T visitProgramPrime(CParser.ProgramPrimeContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
